@@ -1,0 +1,9 @@
+Nom du client: John Doe
+Adresse: 123 Main Street, Anytown, USA
+Email: john@example.com
+Numéro de téléphone: +1 123-456-7890
+Montant du prêt demandé: 290000 EUR
+Durée du prêt: 15 ans
+Description de la propriété: Maison a un etage
+Adresse maison: 222 Cedar Road
+Prix maison: 300000 EUR

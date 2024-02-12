@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1406b1bc-5722-448a-a01a-5a62abdf5f81" activeEnvironment="Default" name="verifConformHouse?wsdl" resourceRoot="" soapui-version="5.7.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="4c23dd0e-95f5-436f-90d2-07c5fd92d777" wsaVersion="NONE" name="Application" type="wsdl" bindingName="{verifConformHouse}Application" soapVersion="1_1" anonymous="optional" definition="http://localhost:8000/verifConformHouse?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8000/verifConformHouse?wsdl"><con:part><con:url>http://localhost:8000/verifConformHouse?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="verifConformHouse" name="Application" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:plink="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:wsdlsoap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap11env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12env="http://www.w3.org/2003/05/soap-envelope" xmlns:soap12enc="http://www.w3.org/2003/05/soap-encoding" xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing" xmlns:xop="http://www.w3.org/2004/08/xop/include" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="verifConformHouse">
+  <wsdl:types>
+    <xs:schema targetNamespace="verifConformHouse" elementFormDefault="qualified">
+      <xs:complexType name="verifConformHouse">
+        <xs:sequence>
+          <xs:element name="land_dispute" type="xs:boolean" minOccurs="0" nillable="true"/>
+          <xs:element name="complies_with_regulations" type="xs:boolean" minOccurs="0" nillable="true"/>
+          <xs:element name="eligible_for_loan" type="xs:boolean" minOccurs="0" nillable="true"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="verifConformHouseResponse">
+        <xs:sequence>
+          <xs:element name="verifConformHouseResult" type="xs:boolean" minOccurs="0" nillable="true"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="verifConformHouse" type="tns:verifConformHouse"/>
+      <xs:element name="verifConformHouseResponse" type="tns:verifConformHouseResponse"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="verifConformHouse">
+    <wsdl:part name="verifConformHouse" element="tns:verifConformHouse"/>
+  </wsdl:message>
+  <wsdl:message name="verifConformHouseResponse">
+    <wsdl:part name="verifConformHouseResponse" element="tns:verifConformHouseResponse"/>
+  </wsdl:message>
+  <wsdl:service name="PropConformService">
+    <wsdl:port name="Application" binding="tns:Application">
+      <wsdlsoap11:address location="http://localhost:8000/verifConformHouse"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:portType name="Application">
+    <wsdl:operation name="verifConformHouse" parameterOrder="verifConformHouse">
+      <wsdl:input name="verifConformHouse" message="tns:verifConformHouse"/>
+      <wsdl:output name="verifConformHouseResponse" message="tns:verifConformHouseResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Application" type="tns:Application">
+    <wsdlsoap11:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="verifConformHouse">
+      <wsdlsoap11:operation soapAction="verifConformHouse" style="document"/>
+      <wsdl:input name="verifConformHouse">
+        <wsdlsoap11:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="verifConformHouseResponse">
+        <wsdlsoap11:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8000/verifConformHouse</con:endpoint></con:endpoints><con:operation id="b60b5943-b6a8-40ef-8ce5-fac5c27ca1de" isOneWay="false" action="verifConformHouse" name="verifConformHouse" bindingOperationName="verifConformHouse" type="Request-Response" outputName="verifConformHouseResponse" inputName="verifConformHouse" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="97e167c0-22e7-4856-ae89-6446c7cd91d3" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8000/verifConformHouse</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="verifConformHouse">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ver:verifConformHouse>
+         <!--Optional:-->
+         <ver:land_dispute>0</ver:land_dispute>
+         <!--Optional:-->
+         <ver:complies_with_regulations>1</ver:complies_with_regulations>
+         <!--Optional:-->
+         <ver:eligible_for_loan>1</ver:eligible_for_loan>
+      </ver:verifConformHouse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="verifConformHouse"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
