@@ -1,4 +1,5 @@
 class CapaciteRemboursement():
+    @classmethod
     def eval_capacite_remboursement(ctx, revenus, depenses):
         try:
             # Calculer le solde mensuel (revenus - dépenses)

@@ -1,4 +1,5 @@
 class CalculateScore():
+    @classmethod
     def calculate_loan_score(ctx, dettes_en_cours, paiement_en_retard, antecedent_faillite):
         try:
             # Logique pour calculer le score en fonction de l'historique financier

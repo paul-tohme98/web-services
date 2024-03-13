@@ -1,9 +1,9 @@
 Nom du client: John Doe
 Adresse: 123 Main Street, Anytown, USA
 Email: john@example.com
-Numéro de téléphone: +1 123-456-7890
-Montant du prêt demandé: 150000 EUR
-Durée du prêt: 15 ans
-Description de la propriété: Maison a un etage
+Numero de telephone: +1 123-456-7890
+Montant du pret demandé: 150000 EUR
+Duree du pret: 15 ans
+Description de la propriete: Maison a un etage
 Adresse maison: 555 Birch Street
 Prix maison: 180000 EUR

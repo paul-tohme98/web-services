@@ -1,6 +1,7 @@
 from statistics import mean
 
 class HouseEstimate():
+    @classmethod
     def house_estimated_value(ctx, input_list):
         try:
             # Vérifier que la liste n'est pas vide
