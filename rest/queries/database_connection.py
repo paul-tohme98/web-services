@@ -32,6 +32,14 @@ class DatabaseConnection:
             return {"error": str(e)}
         
     @classmethod
+    def getCredentials(self, cursor, iduser, passwd):
+        query = "SELECT iduser, passwd FROM users WHERE iduser = %s AND passwd = %s"
+        cursor.execute(query, (iduser, passwd,))
+        res = cursor.fetchone()
+        return res
+
+    
+    @classmethod
     def getClientId(self, cursor, email):
         query = "SELECT client_id FROM clients WHERE email = %s"
         cursor.execute(query, (email,))

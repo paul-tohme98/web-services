@@ -2,8 +2,30 @@ import datetime
 import json
 from services.service_extract_demand import ExtractDemand
 from api import *
+import secrets
 
 class ServiceComposite():
+    @classmethod
+    def generate_token(self):
+        return secrets.token_hex(16)  # Generate a random hex token
+    
+    @classmethod
+    async def auth(cls, iduser, passwd):
+        # Global dictionary to store authentication tokens
+        auth_tokens = {}
+        authCreds = await login(iduser, passwd)
+        if authCreds is not None:
+            token = cls.generate_token()
+            auth_tokens[iduser] = token
+            return token, auth_tokens
+        else:
+            return None, None
+        
+    @classmethod
+    def verify_token(self, auth_tokens, iduser, token):
+        # Check if the token is valid for the given user
+        return auth_tokens.get(iduser) == token
+
     @classmethod
     async def controller(cls, filepath, filecontent):
         # Process the text file content to extract demand information

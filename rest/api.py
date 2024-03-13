@@ -39,6 +39,12 @@ app = FastAPI()
 async def root():
 	return {"message": "Server is Up!"}
 
+@app.get("/login")
+async def login(iduser, passwd):
+    conn, cursor = DatabaseConnection.openConnection(db_host, db_user, db_password, db_database)
+    res = DatabaseConnection.getCredentials(cursor, iduser, passwd)
+    return res
+
 @app.get("/db-connect")
 async def connect_database():
 
