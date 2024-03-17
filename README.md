@@ -56,7 +56,7 @@ SELECT * FROM users;
 Feel free to test with any of the tables (users, demands, houses, properties, clients).
 
 Now open two terminals : 
-	a. in the first one run : 
+a. in the first one run : 
 ```bash
 python server.py
 ```
