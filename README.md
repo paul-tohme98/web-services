@@ -72,5 +72,6 @@ Open Jupyter notebook with the command :
 jupyter notebook
 ```
 Open "Server.ipynb" and run all cells
+
 Open "Client.ipynb" and run all cells
 
