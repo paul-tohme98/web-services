@@ -13,6 +13,13 @@ cd web-services
 ```bash 
 python -m venv venv
 ```
+
+or
+
+```bash
+pthon3 -m venv venv
+```
+
 # Activate the virtual environment
 # On Unix-like systems:
 ```bash
@@ -28,6 +35,11 @@ venv\Scripts\activate
 # Install project dependencies from requirements.txt
 ```bash
 pip install -r requirements.txt
+```
+or
+
+```bash
+pip3 install -r requirements.txt
 ```
 
 ### 4. Run the Code
@@ -61,11 +73,23 @@ a. in the first one run :
 ```bash
 python server.py
 ```
+
+or
+
+```bash
+python3 server.py
+```
+
 b. in the second one run : 
 ```bash
 python client.py
 ```
 
+or
+
+```bash
+python3 client.py
+```
 # 4.2 SOAP Application
 Open Jupyter notebook with the command : 
 ```bash
