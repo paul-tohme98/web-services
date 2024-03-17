@@ -61,7 +61,7 @@ To prevent having the error : mysql.connector.errors.NotSupportedError: Authenti
 ```bash
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
-If you are using a user other than root, replace 'root' with this user
+If you are using a user other than root, replace 'root' with this user and replace password with your actual mysql password
 
 Then, you need to modify the ".env" file and replace the DB_USER & DB_PASSWORD with those of your mysql username and password.
 Now you need to execute all the '.sql' files present in the folder "db_schema_data" inside the schema (bank) that you created. To do so, we used "MySQL Workbench" tool that facilitates the task.
