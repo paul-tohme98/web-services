@@ -60,7 +60,7 @@ Now open two terminals :
 ```bash
 python server.py
 ```
-	b. in the second one run : 
+b. in the second one run : 
 ```bash
 python client.py
 ```
