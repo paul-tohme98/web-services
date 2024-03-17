@@ -10,7 +10,8 @@ class DatabaseConnection:
             host=db_host,
             user=db_user,
             password=db_password,
-            database=db_name
+            database=db_name,
+            auth_plugin='mysql_native_password'
         )
 
         # Create a cursor object to execute SQL queries
