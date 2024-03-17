@@ -95,6 +95,8 @@ Open Jupyter notebook with the command :
 ```bash
 jupyter notebook
 ```
+Open folder "soap"
+
 Open "Server.ipynb" and run all cells
 
 Open "Client.ipynb" and run all cells
