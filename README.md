@@ -58,7 +58,7 @@ Then :
 ```bash
 create schema bank;
 ```
-To prevent having the error : mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+To prevent having the error : mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported, apply the following sql query.
 ```bash
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
