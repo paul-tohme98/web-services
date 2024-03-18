@@ -54,7 +54,7 @@ or
 mysql -u root -p
 ```
 You can replace "root" with your right mysql user.
-Then you need to apply the following query to create the database : 
+Then you need to apply the following query to create the database 
 ```bash
 create schema bank;
 ```
