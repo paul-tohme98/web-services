@@ -54,11 +54,11 @@ or
 mysql -u root -p
 ```
 You can replace "root" with your right mysql user.
-Then : 
+Then you need to apply the following query to create the database : 
 ```bash
 create schema bank;
 ```
-To prevent having the error : mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported, apply the following sql query.
+To prevent having the error : mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported, apply the following sql query : 
 ```bash
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
