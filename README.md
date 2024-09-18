@@ -18,7 +18,7 @@ python -m venv venv
 or
 
 ```bash
-pthon3 -m venv venv
+python3 -m venv venv
 ```
 
 # Activate the virtual environment
